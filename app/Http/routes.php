@@ -11,7 +11,16 @@
 |
 */
 
+Route::controller('auth', 'Auth\AuthController');
+Route::controller('admin', 'AdminController');
+Route::controller('category', 'CategoryController');
+
+Route::get('user',['middleware'=>'auth',function() {
+    return view('user');
+}]);
+
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('main');
 });
 
