@@ -14,6 +14,8 @@
 Route::controller('auth', 'Auth\AuthController');
 Route::controller('admin', 'AdminController');
 Route::controller('category', 'CategoryController');
+Route::controller('size', 'SizeController');
+Route::controller('color', 'ColorController');
 
 Route::get('user',['middleware'=>'auth',function() {
     return view('user');

@@ -1,6 +1,6 @@
 @extends('main')
 @section('content')
-<h3 class="mb0">Add new category</h3>
+<h3 class="mb0">Add new color</h3>
 
 <div id="form">
     {!! Form::open() !!}
@@ -10,7 +10,7 @@
     @endforeach
     
    
-    {!! Form::text('category') !!}
+    {!! Form::text('color') !!}
     
     {!! Form::submit('Add') !!}
     
