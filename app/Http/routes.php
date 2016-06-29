@@ -16,13 +16,13 @@ Route::controller('admin', 'AdminController');
 Route::controller('category', 'CategoryController');
 Route::controller('size', 'SizeController');
 Route::controller('color', 'ColorController');
+Route::controller('shoe', 'ShoeController');
+Route::controller('user', 'UserController');
 
 Route::get('user',['middleware'=>'auth',function() {
     return view('user');
 }]);
 
 
-Route::get('/', function () {
-    return view('main');
-});
+Route::get('/', 'ShoeController@getIndex');
 

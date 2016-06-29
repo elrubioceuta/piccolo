@@ -1,6 +1,6 @@
 @extends('main')
 @section('content')
-<h3 class="mb0">Register</h3>
+<h2>Register</h2>
 
 {!! Form::open(array('url' => 'auth/register')) !!}
 

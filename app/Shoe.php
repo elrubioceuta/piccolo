@@ -18,4 +18,13 @@ class Shoe extends Model
         return $this->belongsTo('App\Color');
     }
     
+    public function images(){
+                return array(
+            'server_path' => public_path().'/uploads/',
+            'asset_path' => 'uploads/',
+            'image_large' => 'large_'.$this->id.'.jpg',
+        );
+
+    }
+    
 }

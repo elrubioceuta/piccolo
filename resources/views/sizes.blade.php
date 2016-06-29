@@ -1,13 +1,13 @@
 @extends('main')
 @section('content')
 
- <h2>Category</h2>    
+ <h2>Size</h2>    
 
-@foreach ( $categories as $category )
+@foreach ( $sizes as $size )
+    
+<h3><a href='{{{ url('shoe/size', $size->id) }}}'>{{{ $size->size }}}</a></h3>
 
-<h3><a href='{{{ url('shoe/category', $category->id) }}}'>{{{ $category->name }}}</a></h3>
-
-@foreach ( $category->shoes as $shoe )
+@foreach ( $size->shoes as $shoe )
       <div class="grid">
           <div style='width: 40%;'><a href="{{{ url('shoe/show', $shoe['id']) }}}"><img src="{{ asset( $shoe->images()['asset_path'].$shoe->images()['image_large'] ) }}" alt=""></a><a href="{{{ url('shoe/show', $shoe['id']) }}}">{{{ $shoe['name'] }}}</a></div>
       </div>

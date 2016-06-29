@@ -3,19 +3,25 @@
      <head>
      <title>Welcome to piccolo.dev</title>
      <meta charset="utf-8">
+     <link rel="stylesheet" href="http://piccolo.onlinewebshop.net/reset.css" />
+    {{ Html::style('css/estilo.css') }}
+    {{ Html::style('css/form.css') }}
      </head>
      <body  class="">
+         <div class="content">
 <!--==============================header=================================-->
  <header>
-  <div class="container_12">
-   <div class="grid_12">
+
+   <div class="header">
     <h1>Calzados Piccolo</h1>
     <div class="menu_block">
 
-     <nav  class="" >
-      <ul class="sf-menu">
-         <li><a href="/">Home</a></li>
-<!--         <li><a href="/shoe/categories">Categories</a></li>-->
+     <nav>
+      <ul id="main-menu">
+         <li id="first"><a href="/shoe">Shoes</a></li>
+         <li><a href="/shoe/categories">Categories</a></li> 
+         <li><a href="/shoe/colors">Colors</a></li>
+         <li><a href="/shoe/sizes">Sizes</a></li>
          @if ( Auth::guest() )
             <li><a href="/auth/login">Login</a></li>
             <li><a href="/auth/register">Register</a></li>
@@ -27,46 +33,26 @@
          @endif
        </ul>
     </nav>
-   
- <div class="clear"></div>
-</div>
-<div class="clear"></div>
-          </div>
-      </div>
+    </div>
+   </div>  
 </header>
 
 <!--==============================Content=================================-->
-<div class="content">
-    <div class="container_12">
+<div class="seccion">
+    <div id="content1">
         @if ( $message = Session::pull('message') )
             <p class="success_msg">{{{ $message }}}</p>
-        @endif
-        <div class="grid_12">
+        @endif  
+    </div>
+    <div id="content2">
 @yield('content')
     </div>
-  </div>
+
 </div>
 <!--==============================footer=================================-->
-<br />
-<div class="bottom_block">
-    <div class="container_12">
-      <div class="grid_10 prefix_1">
-&nbsp;   
-      </div>
-    </div>
-</div>
-
-
-<footer>   
-  <div class="container_12">
-    <div class="grid_12">
-
-      <div class="copy">
-      Diseño web por Miguel Angel Rios - &copy; Calzados Piccolo 
-      </div>
-    </div>
-  </div>
-</footer>
-
+            <footer>
+                &copy; 2016 Calzados Piccolo, proyecto web realizado por Miguel Angel Rios.
+            </footer> 
+         </div>
 </body>
 </html>

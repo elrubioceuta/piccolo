@@ -1,0 +1,238 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700);
+
+body {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 18px;
+    line-height: 1.125rem;
+    font-family: Source Sans Pro, sans-serif;
+    background-color: grey;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 56px;
+    font-size: 3.5rem;
+    line-height: 112px;
+    line-height: 7rem;
+    text-shadow: 2px 2px #BBB;
+    text-shadow: 0.125rem 0.125rem #BBB;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 32px;
+    font-size: 2rem;
+
+    margin-top: 8px;
+    margin-top: 0.5rem;
+    margin-bottom: 16px;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-weight: bold;
+    font-size: 18px;
+    font-size: 1.125rem;
+    margin-top: 2px;
+    margin-top: 0.125rem;
+    margin-bottom: 4px;
+    margin-bottom: 0.25rem;
+}
+
+h4 {
+    font-weight: bolder;
+    font-size: 18px;
+    font-size: 1.125rem;
+    margin-top: 4px;
+    margin-top: 0.25rem;
+    margin-bottom: 32px;
+    margin-bottom: 2rem;
+}
+
+h5 {
+    font-weight: bolder;
+    font-size: 16px;
+    font-size: 1rem;
+    margin-top: 2px;
+    margin-top: 0.125rem;
+    margin-bottom: 4px;
+    margin-bottom: 0.25rem;
+}
+
+h5 a,i{
+    font-weight: normal;
+}
+
+h6 {
+    margin-top: 2px;
+    margin-top: 0.125rem;
+    margin-bottom: 4px;
+    margin-bottom: 0.25rem;
+    text-align: center;
+    color: grey;
+    font-size: 12px;
+    font-size: 0.75em;    
+}
+
+footer {
+    padding-top: 1%;
+    text-align: center;
+    color: grey;
+    font-size: 12px;
+    font-size: 0.75em;
+    clear:both;    
+}
+
+
+header {
+    background-image: url(http://www.algamadecoracion.com/galeria/dise%C3%B1o-decoracion-tiendas-algama-zapateria2.jpg);
+    background-size:     cover;                      
+    background-repeat:   no-repeat;
+    background-position: center center; 
+    
+    color: rgba(255,255,255,0.9);
+    text-align: center;
+}
+
+img {
+    width: 100%;
+}
+
+nav {
+    color: white;
+    background-color: black;
+    
+    border-top-width: 2px;
+    border-top-width: 0.125rem;
+    border-top-style: solid;
+    border-top-color: #717274;
+    border-bottom-width: 2px;
+    border-bottom-width: 0.125rem;
+    border-bottom-style: solid;
+    border-bottom-color: #717274;
+}
+
+nav ul {
+    padding-top: 4px;
+    padding-top: 0.25rem;
+    padding-bottom: 4px;
+    padding-bottom: 0.25rem;
+    
+    clear: both;
+    overflow: auto;
+}
+
+nav li {
+    padding-left: 16px;
+    padding-left: 1rem;
+    padding-right: 16px;
+    padding-right: 1rem;
+    
+    float: left;
+    text-align: center;
+    line-height: 24px;
+    line-height: 1.5rem;
+    height: 24px;
+    height: 1.5rem;
+    text-transform: uppercase;
+    margin: auto 0;
+    
+    border-left-color: white;
+    border-left-style: solid;
+    border-left-width: 2px;
+    border-left-width: 0.125rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+select {
+    width: 200px;
+    width: 12.5rem;
+}
+
+#first {
+    border-left-style: none;
+}
+
+.selected {
+    color: darkgreen;
+    font-weight: bolder;
+}
+
+.description {
+    font-style: italic;
+}
+
+.content {
+    width: 80%;
+    margin:0 auto;
+    background-color: white;
+    color: black;
+    
+    border-top-width: 5px;
+    border-top-width: 0.3125rem;
+    border-top-style: solid;
+    border-top-color: #717274;
+    border-bottom-width: 5px;
+    border-bottom-width: 0.3125rem;
+    border-bottom-style: solid;
+    border-bottom-color: #717274;
+}
+
+.clear {
+    float: none !important;
+    clear: both;
+    
+    padding-top: 16px;
+    padding-top: 1rem;
+    padding-bottom: 16px;
+    padding-bottom: 1rem;
+}
+
+.grid {
+    display: inline;
+    float: left;
+    margin-left: 16px;
+    margin-left: 1rem;
+    margin-top: 16px;
+    margin-top: 1rem;
+}
+
+.success_msg {
+    color: green;
+    font-size: 20px;
+    font-size: 1.25rem;
+}
+
+.error_msg {
+    color: red;
+    font-size: 20px;
+    font-size: 1.25rem;
+}
+
+.seccion {
+    padding-top: 2%;
+    padding-left: 5%;
+    padding-right: 5%;  
+}
+
+.seccion p{
+    margin-bottom: 16px;
+    margin-bottom: 1rem;
+}
+
+@media print {
+    body {
+        color:black;
+        font-size:12pt;
+    }
+    
+    header {
+        background-image: none;
+    }
+}

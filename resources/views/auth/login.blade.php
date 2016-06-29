@@ -1,22 +1,27 @@
 @extends('main')
 @section('content')
-<h3 class="mb0">Login</h3>
+<h2>Login</h2>
 
 {!! Form::open(array('url' => 'auth/login')) !!}
 
 <!-- semantically not the best way to put form into tables -->
-    
-@foreach($errors->all() as $message)
-<p class="error_msg">{{ $message }}</p>
-@endforeach
-
+ 
 <table style="font-size: 20px; line-height: 2em;" id="form">
+
+    
+@foreach($errors->get('email') as $message)
+<tr><td colspan="2" class="error_msg">{{ $message }}</td></tr>
+@endforeach
 
 <tr><td>
 {!! Form::label('email', 'Email address') !!}
 </td><td>
 {!! Form::email('email') !!}
 </td></tr>
+
+@foreach($errors->get('password') as $message)
+<tr><td colspan="2" class="error_msg">{{ $message }}</td></tr>
+@endforeach
 
 <tr><td>
 {!! Form::label('password', 'Password') !!}

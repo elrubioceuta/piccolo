@@ -1,6 +1,6 @@
 @extends('main')
 @section('content')
-<h3 class="mb0">Add new size</h3>
+<h2>Add new size</h2>
 
 <div id="form">
     {!! Form::open() !!}

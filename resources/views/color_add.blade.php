@@ -1,6 +1,6 @@
 @extends('main')
 @section('content')
-<h3 class="mb0">Add new color</h3>
+<h2>Add new color</h2>
 
 <div id="form">
     {!! Form::open() !!}
