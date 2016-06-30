@@ -19,13 +19,17 @@ class BookController extends Controller
          if ( Auth::user()->isAdmin()) {
             $books = Book::all();
          } else {
-            $books = Book::where('user_id', '=', Auth::user()->id)->get();             
-         }
+            $books = Book::where('user_id', '=', Auth::user()->id)->get();  
 
+         }           
+         
+        foreach ( $books as $book ) {
+            $shoes = Shoe::where('id', '=', $book['shoe_id'])->get();
+            
+        } 
+   
         
-//        dd($user,$books);
-        
-        return view('books', array('user_id' => $user,'shoes'=>Shoe::all() ,'books' => $books));
+        return view('books', array('shoes'=>$shoes ,'books' => $books));
     }
     
         

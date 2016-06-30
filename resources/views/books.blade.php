@@ -1,7 +1,7 @@
 @extends('main')
 @section('content')
 
-  <h2>Bookings of {{{ $user_id->name }}}  </h2>
+  <h2>Bookings </h2>
     </div>
 
 
@@ -10,7 +10,7 @@
       <div class="grid">
           <div>
                <h3>Booking number:</h3> {{{ $book['id'] }}}  <br>
-               <h3>Who book it?</h3>  {{{ $book['user_id'] }}}  <br>
+               <h3>Who book it?</h3>  {{{$book['user_id'] }}}  <br>
                <h3>Date of booking:</h3>  {{{ $book['created_at'] }}}  <br>
                <h3>Name of shoes:</h3> {{{ $shoe['name'] }}}  <br>
 
