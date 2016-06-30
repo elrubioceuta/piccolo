@@ -18,6 +18,10 @@ class Shoe extends Model
         return $this->belongsTo('App\Color');
     }
     
+    public function book(){
+        return $this->hasMany('App\Book');
+    }
+    
     public function images(){
                 return array(
             'server_path' => public_path().'/uploads/',

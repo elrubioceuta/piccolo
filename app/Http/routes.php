@@ -12,6 +12,7 @@
 */
 
 Route::controller('auth', 'Auth\AuthController');
+Route::controller('book', 'BookController');
 Route::controller('admin', 'AdminController');
 Route::controller('category', 'CategoryController');
 Route::controller('size', 'SizeController');

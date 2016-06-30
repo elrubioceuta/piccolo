@@ -38,4 +38,8 @@ class User extends Model implements AuthenticatableContract,  AuthorizableContra
     public function isAdmin(){
         return($this->class ==2);
     }    
+    
+    public function book(){
+        return $this->hasMany('App\Book');
+    }
 }

@@ -2,7 +2,6 @@
 @section('content')
 
 <h2>{{{ $shoe->name }}}</h2>
-<!--<h4><a href='{{{ url('order/cartadd', $shoe->id) }}}'>Add to cart</a></h4>-->
 <h5>Price: <i>{{{ $shoe->price }}} €</i></h5>
 <h5>Category: <a href='{{{ url('shoe/category', $shoe->category->id) }}}'>{{{ $shoe->category->name }}}</a></h5>
 <h5>Color: <a href='{{{ url('shoe/color', $shoe->color->id) }}}'>{{{ $shoe->color->name }}}</a></h5>
@@ -16,8 +15,10 @@
 
 <a href="{{{ url('shoe/destroy',$shoe) }}}"><h3 style="color:red">Delete</h3></a>
 
-    
+@else   
+         @if ( Auth::check() )
+            <a href="{{ url('book/add',$shoe) }}"><h3 style="color:green">Book</h3></a>
+         @endif   
 @endif
-
 
 @stop
