@@ -22,12 +22,13 @@ class CreateShoes extends Migration
                 $table->decimal('price', 5, 2);
                 // linking relationships
                 $table->integer('category_id')->unsigned();
-                $table->foreign('category_id')->references('id')->on('categories');
                 $table->integer('color_id')->unsigned();
-                $table->foreign('color_id')->references('id')->on('colors');
-                $table->integer('genre_id')->unsigned();
-                $table->foreign('genre_id')->references('id')->on('genres');
                 $table->integer('size_id')->unsigned();
+         });   
+         
+         Schema::table('shoes', function($table) {
+                $table->foreign('category_id')->references('id')->on('categories');
+                $table->foreign('color_id')->references('id')->on('colors');
                 $table->foreign('size_id')->references('id')->on('sizes');
          });
     }

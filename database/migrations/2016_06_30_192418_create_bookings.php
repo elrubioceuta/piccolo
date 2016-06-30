@@ -20,8 +20,10 @@ class CreateBookings extends Migration
                 $table->text('details');
                 // linking relationships
                 $table->integer('shoe_id')->unsigned();
-                $table->foreign('shoe_id')->references('id')->on('shoes');
                 $table->integer('user_id')->unsigned();
+         });                
+         Schema::table('books', function($table) {                
+                $table->foreign('shoe_id')->references('id')->on('shoes');
                 $table->foreign('user_id')->references('id')->on('users');
          });
     }
